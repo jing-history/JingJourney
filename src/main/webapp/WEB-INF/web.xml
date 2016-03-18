@@ -51,7 +51,7 @@
         </init-param>
         <init-param>
             <param-name>configClass</param-name>
-            <param-value>cn.dreampie.config.AppConfig</param-value>
+            <param-value>com.jingzing.config.AppConfig</param-value>
         </init-param>
     </filter>
     <filter-mapping>

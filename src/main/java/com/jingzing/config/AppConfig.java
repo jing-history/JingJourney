@@ -28,7 +28,7 @@ public class AppConfig extends Config {
         //排除某个目录
         //resourceLoader.addExcludePackages("cn.dreampie.resource");
         //扫描某个目录
-        resourceLoader.addIncludePackages("cn.dreampie.resource");
+        resourceLoader.addIncludePackages("com.jingzing.resource");
     }
 
     /**
