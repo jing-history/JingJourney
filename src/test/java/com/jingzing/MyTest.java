@@ -3,6 +3,7 @@ package com.jingzing;
 import java.math.BigDecimal;
 
 /**
+ * 等额本息
  * Created by Louis Wang on 2016/3/22.
  */
 
@@ -12,9 +13,9 @@ import java.math.BigDecimal;
             BigDecimal lv2 = new BigDecimal(0.15);   //利息 0.012500000 - 0.006666667 = 0.005833333
             BigDecimal lv3 = new BigDecimal(0.08);
 
-            BigDecimal f07 = new BigDecimal(100000);    // 金额
+            BigDecimal f07 = new BigDecimal(50);    // 金额
 
-            BigDecimal f07_2 = new BigDecimal(80000);    // 剩余金额
+            BigDecimal f07_2 = new BigDecimal(10);    // 剩余金额
             int f09 = 6;    //月份
             BigDecimal monthRate = lv2.setScale(9,
                     BigDecimal.ROUND_HALF_UP).divide(new BigDecimal(12),
