@@ -1,17 +1,17 @@
 package com.jingzing.abby;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Created by Louis Wang on 2016/3/31.
+ * @SpringBootApplication注解等价于以默认属性使用@Configuration，@EnableAutoConfiguration和@ComponentScan
  */
 
-@Configuration
+/*@Configuration
 @EnableAutoConfiguration
-@ComponentScan
+@ComponentScan*/
+@SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {
