@@ -1,6 +1,7 @@
 package com.jingzing.provider.mapper;
 
-import org.jmotor.restful.response.ErrorBuilder;
+import com.jingzing.response.Error;
+import com.jingzing.response.ErrorBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +26,7 @@ public class WebApplicationExceptionMapper implements ExceptionMapper<WebApplica
         String message = exception.getLocalizedMessage();
         Response response = exception.getResponse();
         String code = response.getStatusInfo().getReasonPhrase().replace(" ", "_").toLowerCase();
-        org.jmotor.restful.response.Error error = ErrorBuilder.newBuilder().message(message)
+        Error error = ErrorBuilder.newBuilder().message(message)
                 .error(code, message).build();
         return Response.fromResponse(response).entity(error).type(MediaType.APPLICATION_JSON_TYPE).build();
     }

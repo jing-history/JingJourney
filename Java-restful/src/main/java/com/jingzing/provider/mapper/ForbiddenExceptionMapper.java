@@ -1,6 +1,7 @@
 package com.jingzing.provider.mapper;
 
-import org.jmotor.restful.response.ErrorBuilder;
+import com.jingzing.response.Error;
+import com.jingzing.response.ErrorBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +25,7 @@ public class ForbiddenExceptionMapper implements ExceptionMapper<ForbiddenExcept
         LOGGER.error(exception.getLocalizedMessage(), exception);
         Response originalResponse = exception.getResponse();
         String message = exception.getLocalizedMessage();
-        org.jmotor.restful.response.Error error = ErrorBuilder.newBuilder().message(message)
+        Error error = ErrorBuilder.newBuilder().message(message)
                 .error(originalResponse.getStatusInfo().getReasonPhrase().toLowerCase(), message).build();
         return Response.fromResponse(originalResponse).entity(error).type(MediaType.APPLICATION_JSON_TYPE).build();
     }

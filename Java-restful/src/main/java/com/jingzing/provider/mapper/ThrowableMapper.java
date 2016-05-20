@@ -1,6 +1,7 @@
 package com.jingzing.provider.mapper;
 
-import org.jmotor.restful.response.ErrorBuilder;
+
+import com.jingzing.response.ErrorBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
